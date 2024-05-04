@@ -6,7 +6,7 @@ The Vendor Management System is a web application built using Django, designed t
 ### Clone the repository:
 
 ```bash
-git clone https://github.com/your_username/vendor_management.git
+git clone https://github.com/SHIV000000/VendorEase.git
 ```
 ### Navigate to the project directory:
 
