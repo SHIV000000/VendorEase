@@ -50,21 +50,28 @@ python manage.py runserver
 ### Usage
 Access the application: Open your web browser and navigate to http://localhost:8000/.
 
-Admin panel: Access the Django admin panel by visiting http://localhost:8000/admin/. You can login using the admin credentials configured during installation.
-Features
+### Admin panel: Access the Django admin panel by visiting http://localhost:8000/admin/. You can login using the admin credentials configured during installation.
+
+## Features
+```bash
 Vendor Management:
 Add, view, update, and delete vendors.
 View vendor details and performance metrics.
+
 Purchase Order Management:
 Add, view, update, and delete purchase orders.
 Track purchase order status and details.
+
 Performance Metrics:
 Calculate and display vendor performance metrics, including on-time delivery rate, quality rating average, average response time, and fulfillment rate.
+
 Historical Performance:
 Store and display historical performance data for vendors.
-Project Structure
-vendor_management/: Django project directory.
-frontend/: Contains HTML templates and static files (CSS, JavaScript).
-vendors/: Django app for managing vendors and purchase orders.
-db.sqlite3: SQLite database file.
-manage.py: Django project management script.
+```
+
+## Project Structure
+### vendor_management/: Django project directory.
+### frontend/: Contains HTML templates and incorporated Tailwind CDN CSS .
+### vendors/: Django app for managing vendors and purchase orders.
+### db.sqlite3: SQLite database file.
+### manage.py: Django project management script.
