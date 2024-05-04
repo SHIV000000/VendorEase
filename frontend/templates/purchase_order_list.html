@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="text-3xl font-bold mb-6">Purchase Orders</h1>
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="overflow-x-auto">
+            <table class="w-full table-auto">
+                <thead>
+                    <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+                        <th class="py-3 px-6">PO Number</th>
+                        <th class="py-3 px-6">Vendor</th>
+                        <th class="py-3 px-6">Order Date</th>
+                        <th class="py-3 px-6">Delivery Date</th>
+                        <th class="py-3 px-6">Status</th>
+                        <th class="py-3 px-6">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-600 text-sm font-light">
+                    {% for po in purchase_orders %}
+                        <tr class="border-b border-gray-200 hover:bg-gray-100">
+                            <td class="py-3 px-6">{{ po.po_number }}</td>
+                            <td class="py-3 px-6">{{ po.vendor.name }}</td>
+                            <td class="py-3 px-6">{{ po.order_date }}</td>
+                            <td class="py-3 px-6">{{ po.delivery_date }}</td>
+                            <td class="py-3 px-6">{{ po.status }}</td>
+                            <td class="py-3 px-6">
+                                <a href="{% url 'purchase-order-detail' po.id %}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

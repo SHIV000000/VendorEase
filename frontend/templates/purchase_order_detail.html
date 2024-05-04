@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="text-3xl font-bold mb-6">Purchase Order Details</h1>
+    <div class="bg-white rounded-lg shadow-md p-6">
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="po_number">PO Number</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="po_number" type="text" value="{{ purchase_order.po_number }}" disabled>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="vendor">Vendor</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="vendor" type="text" value="{{ purchase_order.vendor.name }}" disabled>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="order_date">Order Date</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="order_date" type="text" value="{{ purchase_order.order_date }}" disabled>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="delivery_date">Delivery Date</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="delivery_date" type="text" value="{{ purchase_order.delivery_date }}" disabled>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="items">Items</label>
+            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="items" rows="3" disabled>{{ purchase_order.items }}</textarea>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="quantity">Quantity</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="quantity" type="text" value="{{ purchase_order.quantity }}" disabled>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="status">Status</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="status" type="text" value="{{ purchase_order.status }}" disabled>
+        </div>
+        {% if purchase_order.quality_rating %}
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="quality_rating">Quality Rating</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="quality_rating" type="text" value="{{ purchase_order.quality_rating }}" disabled>
+        </div>
+        {% endif %}
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="issue_date">Issue Date</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="issue_date" type="text" value="{{ purchase_order.issue_date }}" disabled>
+        </div>
+        {% if purchase_order.acknowledgment_date %}
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="acknowledgment_date">Acknowledgment Date</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="acknowledgment_date" type="text" value="{{ purchase_order.acknowledgment_date }}" disabled>
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}

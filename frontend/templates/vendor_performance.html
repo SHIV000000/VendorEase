@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="text-3xl font-bold mb-6">Vendor Performance</h1>
+    <div class="bg-white rounded-lg shadow-md p-6">
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="on_time_delivery_rate">On-Time Delivery Rate</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="on_time_delivery_rate" type="text" value="{{ vendor.on_time_delivery_rate }}" disabled>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="quality_rating_avg">Quality Rating Average</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="quality_rating_avg" type="text" value="{{ vendor.quality_rating_avg }}" disabled>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="average_response_time">Average Response Time (hours)</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="average_response_time" type="text" value="{{ vendor.average_response_time }}" disabled>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="fulfillment_rate">Fulfillment Rate</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="fulfillment_rate" type="text" value="{{ vendor.fulfillment_rate }}" disabled>
+        </div>
+    </div>
+{% endblock %}

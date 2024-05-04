@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="text-3xl font-bold mb-6">Vendors</h1>
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="overflow-x-auto">
+            <table class="w-full table-auto">
+                <thead>
+                    <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+                        <th class="py-3 px-6">Name</th>
+                        <th class="py-3 px-6">Contact Details</th>
+                        <th class="py-3 px-6">Address</th>
+                        <th class="py-3 px-6">Vendor Code</th>
+                        <th class="py-3 px-6">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-600 text-sm font-light">
+                    {% for vendor in vendors %}
+                        <tr class="border-b border-gray-200 hover:bg-gray-100">
+                            <td class="py-3 px-6">{{ vendor.name }}</td>
+                            <td class="py-3 px-6">{{ vendor.contact_details }}</td>
+                            <td class="py-3 px-6">{{ vendor.address }}</td>
+                            <td class="py-3 px-6">{{ vendor.vendor_code }}</td>
+                            <td class="py-3 px-6">
+                                <a href="{% url 'vendor-detail' vendor.id %}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View</a>
+                                <a href="{% url 'vendor-performance' vendor.id %}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Performance</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
+
