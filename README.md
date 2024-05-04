@@ -11,13 +11,22 @@ git clone https://github.com/SHIV000000/VendorEase.git
 ### Navigate to the project directory:
 
 ```bash
-cd vendor_management
+cd VendorEase
 ```
 ### Create a virtual environment:
+
+#### Windows:
+
+```bash
+py -m venv env
+```
+
+#### Unix/macOS:
 
 ```bash
 python -m venv env
 ```
+
 ### Activate the virtual environment:
 
 #### Windows:
