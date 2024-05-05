@@ -32,7 +32,7 @@ python -m venv env
 #### Windows:
 
 ```bash
-.\env\Scripts\activate
+ env\Scripts\activate
 ```
 
 #### Unix/macOS:
