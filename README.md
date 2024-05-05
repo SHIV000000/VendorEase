@@ -13,8 +13,9 @@ git clone https://github.com/SHIV000000/VendorEase.git
 ```bash
 cd VendorEase
 ```
-## Create a virtual environment:
+## Setup Virtual environment
 
+#### Create a virtual environment:
 
 #### Windows:
 
@@ -41,18 +42,22 @@ python -m venv env
 ```bash
 source env/bin/activate
 ```
+
 ## Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
-### Run migrations:
+## Run migrations:
 
+```bash
+python manage.py makemigration
+```
 ```bash
 python manage.py migrate
 ```
 
-### Start the development server:
+## Start the development server:
 
 ```bash
 python manage.py runserver
