@@ -62,8 +62,8 @@ python manage.py migrate
 ```bash
 python manage.py runserver
 ```
-### Usage
-Access the application: Open your web browser and navigate to http://localhost:8000/.
+
+### Access the application: Open your web browser and navigate to http://localhost:8000/.
 
 ### Admin panel: Access the Django admin panel by visiting http://localhost:8000/admin/. You can login using the admin credentials configured during installation.
 
