@@ -15,7 +15,7 @@ cd VendorEase
 ```
 ## Setup Virtual environment
 
-#### Create a virtual environment:
+### Create a virtual environment:
 
 #### Windows:
 
