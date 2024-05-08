@@ -67,7 +67,7 @@ python manage.py runserver
 
 ### Admin panel: Access the Django admin panel by visiting http://localhost:8000/admin/. You can login using the admin credentials configured during installation.
 
-## Features
+## Features:
 ```bash
 Vendor Management:
 Add, view, update, and delete vendors.
