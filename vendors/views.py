@@ -182,7 +182,7 @@ class PurchaseOrderAcknowledgeView(APIView):
 
 # HTML Template Views
 def index(request):
-    return render(request, 'index.html', {})
+    return render(request, 'base.html', {})
 
 def vendor_list(request):
     vendors = Vendor.objects.all()
